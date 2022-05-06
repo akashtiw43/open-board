@@ -1,0 +1,257 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+    
+}
+.nav{
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1fr 9fr;
+    width: 100vw;
+    margin-top: 1.5rem;
+    margin-left: 3rem;  
+}
+.menu-cont{
+    height: 5rem;
+    width: 70%;
+    display: none;
+    justify-content: space-around;
+    transition: 1s ease;
+}
+.menu-cont > *{
+    display: block;
+    width: 3rem;
+    cursor: pointer;
+    transition: 1s ease;
+}
+.scale-tools{
+    animation: scale-tools 1s;
+}
+@keyframes scale-tools{
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.options-cont{
+    height: 4rem;
+    width: 4rem;
+    margin-top: 0.8rem;
+    border-radius: 50%;
+    background-color: #f1f2f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+.pencil-cont{
+    position: absolute;
+    left: 12.5rem;
+    top: 6.2rem;
+    height: 5rem;
+    width: 6rem;
+    border: 1px solid #f1f2f6;
+    border-radius: 2px;
+    display: none;
+}
+.pencil-width-cont{
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.pencil-width-cont input{
+    width: 90%;
+    cursor: pointer;
+}
+.pencil-color-cont{
+    width:90%;
+    justify-content: center;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    
+}
+.pencil-color{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius:50%;
+    }
+.pencil-color:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.red{
+    background-color: red;
+}
+.black{
+    background-color: black;
+}
+.green{
+    background-color: green;
+}
+.eraser-cont{
+    display: none;
+    position: absolute;
+    left: 20rem;
+    height: 3rem;
+    width: 6rem;
+    border: 1px solid #f1f2f6;
+    border-radius: 2px;
+    top: 6.2rem;
+}
+.eraser-width-cont{
+    display: flex;
+    align-items: center;
+    height: 3rem;
+}
+.eraser-width-cont input{
+    width: 90%;
+    cursor: pointer;
+}
+.sticky-cont{
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    top: 15rem;
+    left: 15rem;
+}
+
+.header-cont{
+    height: 2rem;
+    background-color: #f1f2f6;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header-cont > *{
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 0 .5rem;
+    border-radius: 50%;
+}
+.minimize{
+    background-color: #2ed573;
+}
+.remove{
+    background-color: #ff6348;
+}
+.note-cont{
+    height: calc( 100% - 2rem );
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+textarea{
+    height: 100%;
+    width: 100%;
+    resize: none;
+    outline: none;
+    border: none;
+  
+}
+.uploaded-img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/*---------------RESPONSIVE---------------*/
+@media only screen and (min-width:855px) and (max-width :1050px) {
+    .pencil-cont{
+        left: 11rem;
+        top: 6.2rem;
+        height: 4rem;
+        width: 5rem;
+        
+    }
+    .eraser-cont{
+        left: 16rem;
+        width: 4rem;
+        top: 6rem;
+    }
+    
+}
+@media only screen and (min-width:705px) and (max-width :854px){
+    .pencil-cont{
+        left: 9rem;
+        top: 6.2rem;
+        height: 4rem;
+        width: 5rem;
+        border: none;
+    }
+    .eraser-cont{
+        left: 14rem;
+        width: 4rem;
+        top: 5.5rem;
+        border: none;
+    }
+}
+@media only screen and (min-width:505px) and (max-width :704px){
+    .nav{
+        grid-template-columns: 2fr 8fr;
+    }
+    .menu-cont{
+        width: 100%;
+    }
+    .pencil-cont{
+        left: 11rem;
+        top: 6.2rem;
+        height: 3rem;
+        width: 4.5rem;
+        border: none;
+    }
+    .eraser-cont{
+        left: 16rem;
+        width: 4.5rem;
+        top: 5.5rem;
+        border: none;
+    }
+}
+@media only screen and (min-width:405px) and (max-width :504px){
+    .nav{
+        grid-template-columns: 2fr 8fr;
+        margin-left: 1rem;
+    }
+    .menu-cont{
+        width: 100%;
+    }
+    .pencil-cont{
+        left: 7rem;
+        top: 6.2rem;
+        height: 3rem;
+        width: 4rem;
+        border: none;
+    }
+    .eraser-cont{
+        left: 11rem;
+        width: 4rem;
+        top: 5.5rem;
+        border: none;
+    }
+}
+@media only screen and (max-width:404px){
+    .menu-cont{
+        flex-direction: column;
+        position: absolute;
+        top: 10rem;
+        height: 80vh;
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .pencil-cont{
+        left:6.4rem;
+        top: 11.2rem;
+    }
+    .eraser-cont{
+        top: 15.5rem;
+        left: 6.7rem;
+    }
+}
