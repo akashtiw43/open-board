@@ -14,4 +14,4 @@ Features include :
                    
                    6.Downloading canvas
                    
-               App deployed at : https://my-noteboard.herokuapp.com/
+               App deployed at: https://my-noteboard.herokuapp.com/
